@@ -1,0 +1,687 @@
+{
+  "designSystem": {
+    "metadata": {
+      "name": "Real Estate Login Portal Design System",
+      "version": "1.0",
+      "type": "Authentication & Property Management Interface",
+      "purpose": "Design system for creating modern, split-screen login interfaces with image carousel and form sections, optimized for real estate and property management applications"
+    },
+    "colorPalette": {
+      "primary": {
+        "blue": "#3B82F6",
+        "darkBlue": "#2563EB",
+        "lightBlue": "#60A5FA",
+        "description": "Primary action color for buttons and interactive elements"
+      },
+      "neutral": {
+        "white": "#FFFFFF",
+        "lightGray": "#F5F5F5",
+        "mediumGray": "#9CA3AF",
+        "darkGray": "#6B7280",
+        "charcoal": "#374151",
+        "black": "#000000",
+        "description": "Neutral tones for backgrounds, text, and borders"
+      },
+      "background": {
+        "offWhite": "#F9FAFB",
+        "cardWhite": "#FFFFFF",
+        "overlayDark": "rgba(0, 0, 0, 0.3)",
+        "overlayGradient": "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%)",
+        "description": "Background colors and overlays for sections"
+      },
+      "text": {
+        "primary": "#1F2937",
+        "secondary": "#6B7280",
+        "tertiary": "#9CA3AF",
+        "inverse": "#FFFFFF",
+        "link": "#3B82F6",
+        "description": "Text color hierarchy"
+      },
+      "borders": {
+        "light": "#E5E7EB",
+        "medium": "#D1D5DB",
+        "input": "#D1D5DB",
+        "focus": "#3B82F6",
+        "description": "Border colors for inputs and dividers"
+      },
+      "semantic": {
+        "error": "#EF4444",
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "info": "#3B82F6",
+        "checkboxActive": "#3B82F6"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "primary": "'Inter', 'SF Pro Display', -apple-system, system-ui, sans-serif",
+        "secondary": "'Roboto', 'Helvetica Neue', sans-serif",
+        "description": "Modern, clean sans-serif fonts for readability"
+      },
+      "fontSizes": {
+        "hero": "48px",
+        "h1": "36px",
+        "h2": "28px",
+        "h3": "24px",
+        "h4": "20px",
+        "body": "16px",
+        "small": "14px",
+        "tiny": "12px"
+      },
+      "fontWeights": {
+        "light": 300,
+        "regular": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700,
+        "extrabold": 800
+      },
+      "lineHeights": {
+        "tight": 1.2,
+        "normal": 1.5,
+        "relaxed": 1.75,
+        "loose": 2
+      },
+      "letterSpacing": {
+        "tight": "-0.02em",
+        "normal": "0",
+        "wide": "0.025em"
+      }
+    },
+    "spacing": {
+      "scale": "8px base unit",
+      "values": {
+        "xs": "4px",
+        "sm": "8px",
+        "md": "16px",
+        "lg": "24px",
+        "xl": "32px",
+        "2xl": "48px",
+        "3xl": "64px",
+        "4xl": "96px"
+      },
+      "formSpacing": {
+        "inputPadding": "14px 20px",
+        "buttonPadding": "16px 32px",
+        "fieldGap": "24px",
+        "sectionGap": "32px"
+      }
+    },
+    "borderRadius": {
+      "none": "0",
+      "small": "4px",
+      "medium": "8px",
+      "large": "12px",
+      "xlarge": "16px",
+      "2xlarge": "24px",
+      "full": "9999px",
+      "pill": "9999px"
+    },
+    "shadows": {
+      "none": "none",
+      "subtle": "0 1px 2px rgba(0, 0, 0, 0.05)",
+      "card": "0 4px 6px rgba(0, 0, 0, 0.1)",
+      "elevated": "0 10px 15px rgba(0, 0, 0, 0.1)",
+      "overlay": "0 20px 25px rgba(0, 0, 0, 0.15)",
+      "inner": "inset 0 2px 4px rgba(0, 0, 0, 0.05)"
+    },
+    "layoutStructure": {
+      "type": "Split-screen with image carousel and form",
+      "aspectRatio": "16:9 or full viewport height",
+      "gridSystem": {
+        "columns": "2 columns (50/50 split on desktop)",
+        "gap": "0",
+        "responsive": "Stack vertically on mobile"
+      },
+      "regions": [
+        {
+          "name": "Image Carousel Section (Left)",
+          "width": "50% (desktop) / 100% (mobile)",
+          "features": [
+            "Full-height image background",
+            "Logo overlay (top-left)",
+            "Bottom text overlay with gradient backdrop",
+            "Carousel pagination dots",
+            "Rounded outer corners (top-left, bottom-left)"
+          ]
+        },
+        {
+          "name": "Form Section (Right)",
+          "width": "50% (desktop) / 100% (mobile)",
+          "features": [
+            "White background",
+            "Centered content area",
+            "Top-right login button",
+            "Form fields with labels",
+            "Social login options",
+            "Registration link at bottom",
+            "Rounded outer corners (top-right, bottom-right)"
+          ]
+        }
+      ],
+      "containerMaxWidth": "1440px",
+      "formMaxWidth": "480px"
+    },
+    "componentPatterns": {
+      "splitScreenLayout": {
+        "desktop": {
+          "layout": "Two-column grid (1:1 ratio)",
+          "imageSection": "Left 50%, fixed or sticky",
+          "formSection": "Right 50%, scrollable if needed",
+          "outerRadius": "24px on container",
+          "innerDivision": "No gap, seamless join"
+        },
+        "mobile": {
+          "layout": "Single column, stacked",
+          "order": "Image section first, then form",
+          "imageHeight": "40vh minimum",
+          "formPadding": "24px"
+        }
+      },
+      "imageCarousel": {
+        "structure": {
+          "container": "Relative positioned, overflow hidden",
+          "images": "Absolute positioned, full cover",
+          "overlay": "Gradient from transparent to dark at bottom",
+          "aspectRatio": "Maintain original, cover fit"
+        },
+        "logo": {
+          "position": "Top-left, 24-32px from edges",
+          "style": "White or light colored",
+          "size": "40-48px height",
+          "background": "Optional: semi-transparent backdrop",
+          "shape": "Rounded rectangle or pill"
+        },
+        "textOverlay": {
+          "position": "Bottom of image",
+          "padding": "32px",
+          "background": "Linear gradient overlay",
+          "title": {
+            "fontSize": "32-36px",
+            "fontWeight": 600,
+            "color": "#FFFFFF",
+            "marginBottom": "12px"
+          },
+          "description": {
+            "fontSize": "16px",
+            "fontWeight": 400,
+            "color": "rgba(255, 255, 255, 0.9)",
+            "lineHeight": 1.6,
+            "maxWidth": "90%"
+          }
+        },
+        "pagination": {
+          "position": "Bottom center, above text or below",
+          "dotSize": "8px width x 8px height",
+          "dotGap": "8px",
+          "inactiveDot": {
+            "background": "rgba(255, 255, 255, 0.4)",
+            "borderRadius": "full"
+          },
+          "activeDot": {
+            "background": "#FFFFFF",
+            "width": "24px",
+            "borderRadius": "full",
+            "transition": "width 0.3s ease"
+          }
+        },
+        "animation": {
+          "transition": "Fade or slide",
+          "duration": "0.6s",
+          "easing": "ease-in-out",
+          "autoplay": "5-7 seconds per slide"
+        }
+      },
+      "formSection": {
+        "layout": {
+          "alignment": "Center vertically and horizontally",
+          "maxWidth": "480px",
+          "padding": "48px 40px",
+          "background": "#FFFFFF"
+        },
+        "header": {
+          "loginButton": {
+            "position": "Top-right of form section",
+            "margin": "24px 32px",
+            "style": "Black background, white text",
+            "borderRadius": "full (pill shape)",
+            "padding": "12px 32px",
+            "fontSize": "14px",
+            "fontWeight": 600
+          },
+          "welcomeText": {
+            "fontSize": "36px",
+            "fontWeight": 700,
+            "color": "#1F2937",
+            "marginBottom": "8px",
+            "lineHeight": 1.2
+          },
+          "subtitle": {
+            "fontSize": "14px",
+            "fontWeight": 400,
+            "color": "#6B7280",
+            "marginBottom": "40px"
+          }
+        },
+        "formFields": {
+          "label": {
+            "fontSize": "14px",
+            "fontWeight": 500,
+            "color": "#374151",
+            "marginBottom": "8px",
+            "display": "block"
+          },
+          "input": {
+            "height": "52px",
+            "padding": "14px 20px",
+            "fontSize": "16px",
+            "border": "1px solid #D1D5DB",
+            "borderRadius": "12px",
+            "background": "#FFFFFF",
+            "transition": "border-color 0.2s, box-shadow 0.2s",
+            "placeholder": {
+              "color": "#9CA3AF",
+              "fontWeight": 400
+            },
+            "focus": {
+              "borderColor": "#3B82F6",
+              "boxShadow": "0 0 0 3px rgba(59, 130, 246, 0.1)",
+              "outline": "none"
+            },
+            "error": {
+              "borderColor": "#EF4444",
+              "boxShadow": "0 0 0 3px rgba(239, 68, 68, 0.1)"
+            }
+          },
+          "passwordInput": {
+            "type": "password",
+            "toggleIcon": {
+              "position": "Absolute, right 20px, center vertical",
+              "size": "20px",
+              "color": "#6B7280",
+              "cursor": "pointer",
+              "hover": {
+                "color": "#374151"
+              }
+            }
+          },
+          "checkbox": {
+            "size": "18px",
+            "borderRadius": "4px",
+            "border": "2px solid #D1D5DB",
+            "checked": {
+              "background": "#3B82F6",
+              "borderColor": "#3B82F6",
+              "checkmark": "#FFFFFF"
+            },
+            "label": {
+              "fontSize": "14px",
+              "color": "#374151",
+              "marginLeft": "8px"
+            }
+          },
+          "spacing": "24px between fields"
+        },
+        "utilities": {
+          "rememberMe": {
+            "layout": "Horizontal flex, checkbox + label",
+            "alignment": "Left aligned"
+          },
+          "forgotPassword": {
+            "fontSize": "14px",
+            "color": "#6B7280",
+            "hover": {
+              "color": "#3B82F6",
+              "textDecoration": "underline"
+            },
+            "alignment": "Right aligned, same row as remember me"
+          },
+          "divider": {
+            "type": "Horizontal line with text",
+            "margin": "32px 0",
+            "line": {
+              "color": "#E5E7EB",
+              "height": "1px"
+            },
+            "text": {
+              "fontSize": "14px",
+              "color": "#9CA3AF",
+              "background": "#FFFFFF",
+              "padding": "0 16px"
+            }
+          }
+        },
+        "buttons": {
+          "primary": {
+            "background": "#3B82F6",
+            "color": "#FFFFFF",
+            "height": "52px",
+            "borderRadius": "12px",
+            "fontSize": "16px",
+            "fontWeight": 600,
+            "width": "100%",
+            "border": "none",
+            "cursor": "pointer",
+            "transition": "background 0.2s, transform 0.1s",
+            "hover": {
+              "background": "#2563EB",
+              "transform": "translateY(-1px)"
+            },
+            "active": {
+              "background": "#1D4ED8",
+              "transform": "translateY(0)"
+            },
+            "disabled": {
+              "background": "#93C5FD",
+              "cursor": "not-allowed",
+              "opacity": 0.6
+            }
+          },
+          "social": {
+            "height": "52px",
+            "borderRadius": "12px",
+            "border": "1px solid #E5E7EB",
+            "background": "#FFFFFF",
+            "fontSize": "15px",
+            "fontWeight": 500,
+            "color": "#374151",
+            "display": "flex",
+            "alignItems": "center",
+            "justifyContent": "center",
+            "gap": "12px",
+            "cursor": "pointer",
+            "transition": "border-color 0.2s, box-shadow 0.2s",
+            "hover": {
+              "borderColor": "#D1D5DB",
+              "boxShadow": "0 2px 4px rgba(0, 0, 0, 0.05)"
+            },
+            "icon": {
+              "size": "20px",
+              "display": "inline-block"
+            }
+          }
+        },
+        "footer": {
+          "registration": {
+            "marginTop": "32px",
+            "fontSize": "14px",
+            "textAlign": "center",
+            "normalText": {
+              "color": "#6B7280"
+            },
+            "link": {
+              "color": "#3B82F6",
+              "fontWeight": 600,
+              "textDecoration": "none",
+              "hover": {
+                "textDecoration": "underline"
+              }
+            }
+          }
+        }
+      },
+      "socialLogin": {
+        "layout": "Grid or flex, 2 columns on desktop",
+        "gap": "12px",
+        "buttons": [
+          {
+            "provider": "Google",
+            "icon": "Google logo",
+            "text": "Sign in with Google",
+            "background": "#FFFFFF",
+            "border": "1px solid #E5E7EB"
+          },
+          {
+            "provider": "Apple",
+            "icon": "Apple logo",
+            "text": "Sign in with Apple",
+            "background": "#FFFFFF",
+            "border": "1px solid #E5E7EB"
+          }
+        ]
+      }
+    },
+    "interactionPatterns": {
+      "hover": {
+        "buttons": "Slight color shift + shadow",
+        "links": "Color change + underline",
+        "inputs": "Border color change",
+        "socialButtons": "Border color shift + subtle shadow"
+      },
+      "focus": {
+        "inputs": "Blue border + outer glow ring",
+        "buttons": "Outline ring in brand color",
+        "links": "Outline ring"
+      },
+      "active": {
+        "buttons": "Darker shade + slight scale down",
+        "inputs": "Maintain focus state"
+      },
+      "transitions": {
+        "duration": "0.2s - 0.3s",
+        "easing": "ease-in-out",
+        "properties": ["background-color", "border-color", "box-shadow", "transform", "opacity"]
+      },
+      "loading": {
+        "button": "Spinner + disabled state + loading text",
+        "form": "Overlay with spinner"
+      },
+      "validation": {
+        "realTime": "On blur for individual fields",
+        "error": "Red border + error message below field",
+        "success": "Green checkmark icon (optional)",
+        "message": {
+          "fontSize": "13px",
+          "color": "#EF4444",
+          "marginTop": "6px"
+        }
+      }
+    },
+    "responsiveBehavior": {
+      "breakpoints": {
+        "mobile": "< 768px",
+        "tablet": "768px - 1023px",
+        "desktop": "> 1024px"
+      },
+      "adaptations": {
+        "mobile": {
+          "layout": "Single column, vertical stack",
+          "imageSection": {
+            "height": "40vh",
+            "position": "relative",
+            "order": 1
+          },
+          "formSection": {
+            "padding": "24px 20px",
+            "order": 2
+          },
+          "loginButton": "Top-right but smaller padding",
+          "socialButtons": "Full width, stacked",
+          "fontSize": "Scale down 10-15%"
+        },
+        "tablet": {
+          "layout": "Can be single or split based on orientation",
+          "imageSection": "50vh in portrait, 50% in landscape",
+          "formSection": "Centered with more padding",
+          "socialButtons": "2 columns maintained"
+        },
+        "desktop": {
+          "layout": "50/50 split screen",
+          "imageSection": "Full height, sticky",
+          "formSection": "Centered, max-width constrained",
+          "allFeatures": "Fully visible and spaced"
+        }
+      }
+    },
+    "contentHierarchy": {
+      "level1": {
+        "element": "Welcome headline",
+        "size": "36px",
+        "weight": 700,
+        "importance": "Primary message"
+      },
+      "level2": {
+        "element": "Image overlay headline",
+        "size": "32px",
+        "weight": 600,
+        "importance": "Value proposition"
+      },
+      "level3": {
+        "element": "Input labels, section text",
+        "size": "14px",
+        "weight": 500,
+        "importance": "Field identification"
+      },
+      "level4": {
+        "element": "Helper text, links, descriptions",
+        "size": "14px",
+        "weight": 400,
+        "importance": "Supporting information"
+      }
+    },
+    "visualPrinciples": {
+      "whitespace": "Generous spacing for breathing room and focus",
+      "contrast": "High contrast between text and backgrounds for readability",
+      "alignment": "Left-aligned form elements, centered content blocks",
+      "consistency": "Uniform border radius, spacing, and component styling",
+      "hierarchy": "Clear visual weight from headlines to body text",
+      "balance": "Equal visual weight between image and form sections",
+      "accessibility": "WCAG AA compliant contrast ratios, focus indicators",
+      "simplicity": "Clean, uncluttered interface with focused user flow"
+    },
+    "accessibilityFeatures": {
+      "colorContrast": {
+        "textOnWhite": "Minimum 4.5:1 for body text",
+        "largeText": "Minimum 3:1 for 18px+ or bold 14px+",
+        "interactive": "Sufficient contrast for all states"
+      },
+      "focusIndicators": {
+        "visible": "Clear outline or ring on all focusable elements",
+        "color": "#3B82F6",
+        "width": "3px",
+        "offset": "2px"
+      },
+      "formLabels": {
+        "associated": "Proper label/input associations with for/id",
+        "required": "Indicated visually and programmatically",
+        "errors": "Announced to screen readers via aria-live"
+      },
+      "keyboardNavigation": {
+        "tabOrder": "Logical flow top to bottom",
+        "skipLinks": "Optional skip to main content",
+        "enterSubmit": "Submit form on Enter key"
+      },
+      "screenReaders": {
+        "altText": "For logo and decorative images",
+        "ariaLabels": "For icons and icon-only buttons",
+        "landmarks": "Proper semantic HTML sections"
+      }
+    },
+    "implementationGuidance": {
+      "forAI": [
+        "Create 50/50 split layout: image carousel left, form right",
+        "Left section: full-height background image with overlay gradient at bottom",
+        "Place logo in top-left corner with optional backdrop",
+        "Add headline and description text at bottom of image with white text on dark gradient",
+        "Include carousel pagination dots at bottom (white, active dot expands horizontally)",
+        "Right section: white background with centered form (max-width 480px)",
+        "Place black pill-shaped 'Login' button in top-right corner",
+        "Add large headline (36px, bold): 'Welcome Back to Real Nest!'",
+        "Add subtitle below headline (14px, gray): 'Sign in your account'",
+        "Create input fields with labels, 52px height, 12px border-radius, gray borders",
+        "Email input with placeholder text",
+        "Password input with show/hide toggle icon on right",
+        "Add 'Remember Me' checkbox on left, 'Forgot Password?' link on right (same line)",
+        "Main login button: full-width, blue (#3B82F6), 52px height, 12px radius, white text",
+        "Add horizontal divider with 'Instant Login' text in center",
+        "Create two social login buttons (Google and Apple) side-by-side, white with borders",
+        "Add 'Don't have an account? Register' at bottom with blue link",
+        "Use 24px spacing between form elements",
+        "Apply 12px border radius to all inputs and buttons",
+        "Add subtle shadows to buttons on hover",
+        "Implement focus states with blue border and outer ring",
+        "On mobile: stack vertically, image section 40vh, form below with padding",
+        "Ensure outer container has 24px border radius",
+        "Use Inter or similar modern sans-serif font throughout"
+      ],
+      "cssPatterns": {
+        "splitLayout": "display: grid; grid-template-columns: 1fr 1fr; height: 100vh;",
+        "imageSection": "background-size: cover; background-position: center; position: relative;",
+        "imageOverlay": "position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.4));",
+        "formSection": "display: flex; align-items: center; justify-content: center; background: white;",
+        "inputField": "height: 52px; padding: 14px 20px; border: 1px solid #D1D5DB; border-radius: 12px;",
+        "primaryButton": "background: #3B82F6; color: white; height: 52px; border-radius: 12px; width: 100%;"
+      },
+      "componentStructure": [
+        {
+          "component": "SplitScreenContainer",
+          "children": ["ImageCarouselSection", "FormSection"]
+        },
+        {
+          "component": "ImageCarouselSection",
+          "children": ["Logo", "BackgroundImage", "TextOverlay", "CarouselPagination"]
+        },
+        {
+          "component": "FormSection",
+          "children": ["LoginButton", "WelcomeHeader", "LoginForm", "SocialLogin", "RegisterLink"]
+        },
+        {
+          "component": "LoginForm",
+          "children": ["EmailInput", "PasswordInput", "RememberMeCheckbox", "ForgotPasswordLink", "SubmitButton"]
+        }
+      ]
+    },
+    "designTokens": {
+      "colors": {
+        "primary-blue": "#3B82F6",
+        "primary-dark": "#2563EB",
+        "text-primary": "#1F2937",
+        "text-secondary": "#6B7280",
+        "text-tertiary": "#9CA3AF",
+        "border-default": "#D1D5DB",
+        "border-light": "#E5E7EB",
+        "background-white": "#FFFFFF",
+        "background-gray": "#F9FAFB",
+        "overlay-dark": "rgba(0, 0, 0, 0.4)"
+      },
+      "spacing": {
+        "unit": "8px",
+        "xs": "4px",
+        "sm": "8px",
+        "md": "16px",
+        "lg": "24px",
+        "xl": "32px",
+        "2xl": "48px"
+      },
+      "typography": {
+        "font-family": "Inter, -apple-system, system-ui",
+        "size-hero": "36px",
+        "size-h2": "32px",
+        "size-body": "16px",
+        "size-small": "14px",
+        "weight-bold": "700",
+        "weight-semibold": "600",
+        "weight-medium": "500",
+        "weight-regular": "400"
+      },
+      "effects": {
+        "radius-large": "12px",
+        "radius-full": "9999px",
+        "shadow-card": "0 4px 6px rgba(0, 0, 0, 0.1)",
+        "shadow-focus": "0 0 0 3px rgba(59, 130, 246, 0.1)"
+      }
+    },
+    "useCases": {
+      "primaryUseCase": "Authentication pages for real estate and property management platforms",
+      "applicableTo": [
+        "Real estate login/signup pages",
+        "Property management portals",
+        "Rental platforms",
+        "Home buying/selling websites",
+        "SaaS authentication screens",
+        "Membership sites with visual appeal",
+        "Any application needing split-screen login with imagery"
+      ]
+    }
+  }
+}
