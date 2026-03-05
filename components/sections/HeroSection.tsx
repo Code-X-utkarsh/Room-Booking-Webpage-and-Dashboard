@@ -3,12 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const HERO_IMAGE_URL = "/whisk_9.jpeg";
+const HERO_IMAGE_URL = "/Whisk_9.jpeg";
 
 export default function HeroSection() {
   return (
     <section className="relative w-full pt-28 pb-4 sm:pt-32">
-      {/* Container bounding the inset image */}
+      {/* Container bounding the inset image */} 
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
 
         {/* Main Image Block with extreme rounded corners */}
