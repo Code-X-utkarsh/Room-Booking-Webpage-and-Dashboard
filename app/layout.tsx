@@ -5,6 +5,7 @@ import { AuthProvider } from "@/context/AuthContext";
 import { BookingProvider } from "@/context/BookingContext";
 import { SidebarProvider } from "@/context/SidebarContext";
 import ErrorBoundary from "@/components/layout/ErrorBoundary";
+import ChatbotWidget from "@/components/chatbot/ChatbotWidget";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
             <SidebarProvider>
               <ErrorBoundary>
                 {children}
+                <ChatbotWidget />
               </ErrorBoundary>
             </SidebarProvider>
           </BookingProvider>
