@@ -15,6 +15,7 @@ This project implements a full mock frontend for a hotel booking application, fe
 5. **My Bookings Page**: A management interface to view and cancel existing bookings.
 6. **Responsive Design**: Mobile-friendly slide-out sidebar and fluid grid layouts.
 7. **Global Error Handling**: Custom Error Boundary that gracefully catches rendering crashes.
+8. **Chatbot Widget**: A floating chatbot widget for user assistance.
 
 ## Technologies Used
 
